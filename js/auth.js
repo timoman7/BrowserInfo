@@ -26,6 +26,7 @@
         LogIn.addEventListener("click", login);
         LogOut.addEventListener("click", logout);
         setInterval(function() {
+            currentUser = myAuth.currentUser;
             if(currentUser != null) {
                 LogIn.classList.remove("visible");
                 LogIn.classList.add("hidden");
