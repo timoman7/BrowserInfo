@@ -1,0 +1,13 @@
+body {
+    padding: 70px 0;
+    text-align: center;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    visibility: visible;
+}
+.button {
+    font-size: 32px;
+}
