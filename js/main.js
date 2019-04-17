@@ -1,6 +1,6 @@
 (function() {
     let myDatabase = firebase.database();
-    let test = myDatabase.ref("test");
+    let myAuth = firebase.auth();
     function readableObject(object) {
         let str = "";
         for(let key in object) {
@@ -33,7 +33,7 @@
         return finishedObject;
     }
     function uploadInfo(info) {
-        test.set(info);
+        myDatabase.ref(`users/${myAuth.currentUser.uid}`).set(info);
     }
     window.addEventListener("load", function() {
         let Accept = document.querySelector("#acceptButton");
